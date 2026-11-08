@@ -17,8 +17,6 @@ export const siteConfig = {
   },
   geo: { lat: 14.7608411, lng: 121.0442613 },
   mapsUrl: "https://maps.app.goo.gl/VX7EZud4vLn2mM9U8",
-  mapsEmbedSrc:
-    "https://www.google.com/maps?q=Zalven+Calibration+Shop,+967+Captain+Samano+St,+Caloocan&z=17&output=embed",
   facebookUrl: "https://www.facebook.com/vcsdieselcalibrationservices",
   reviewUrl: "https://g.page/r/CVBCAnbGpFsqEBM/review",
   hours: { open: "06:00", close: "20:00", label: "6:00 AM – 8:00 PM, every day" },

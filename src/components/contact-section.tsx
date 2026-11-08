@@ -163,29 +163,29 @@ export function ContactSection() {
         </div>
 
         <div className="mt-6 grid gap-6 lg:grid-cols-5">
-          <Card className="overflow-hidden border-0 bg-white/5 py-0 ring-1 ring-white/10 lg:col-span-3">
-            <iframe
-              title={`${siteConfig.name} location map`}
-              src={siteConfig.mapsEmbedSrc}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="h-72 w-full border-0"
-            />
-            <div className="flex items-center justify-between px-4 py-3">
-              <div>
-                <p className="text-sm font-semibold text-white">{siteConfig.legalName}</p>
-                <p className="text-xs text-brand-silver">{siteConfig.address.full}</p>
+          <Card className="overflow-hidden border-0 bg-white/5 ring-1 ring-white/10 lg:col-span-3">
+            <CardContent className="flex h-full flex-col items-center justify-center gap-3 py-10 text-center">
+              <div className="flex size-14 items-center justify-center rounded-full bg-brand-orange/15 text-brand-orange">
+                <MapPin className="size-7" />
               </div>
-              <a
-                href={siteConfig.mapsUrl}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="inline-flex shrink-0 items-center gap-1.5 text-xs font-medium text-brand-orange hover:underline"
+              <div>
+                <p className="text-base font-semibold text-white">{siteConfig.legalName}</p>
+                <p className="mt-1 text-sm text-brand-silver">{siteConfig.address.full}</p>
+              </div>
+              <Button
+                render={
+                  <a
+                    href={siteConfig.mapsUrl}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  />
+                }
+                className="mt-2 bg-brand-orange text-white hover:bg-brand-orange/90"
               >
-                <Navigation className="size-3.5" />
-                Get Directions
-              </a>
-            </div>
+                <Navigation className="size-4" />
+                Open in Google Maps
+              </Button>
+            </CardContent>
           </Card>
 
           <Card className="border-0 bg-white lg:col-span-2">
