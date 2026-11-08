@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { siteConfig } from "@/lib/site-config"
 import { ReviewCardDialog } from "@/components/review-card-dialog"
-import reviewQr from "@/assets/images/review-qr.png"
+import reviewQr from "@/assets/images/review-qr.webp"
 
 export function ContactSection() {
   const [name, setName] = useState("")

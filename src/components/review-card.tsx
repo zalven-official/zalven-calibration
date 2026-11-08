@@ -1,6 +1,6 @@
 import { forwardRef } from "react"
 import logo from "@/assets/images/logo.webp"
-import reviewQr from "@/assets/images/review-qr.png"
+import reviewQr from "@/assets/images/review-qr.webp"
 import { siteConfig } from "@/lib/site-config"
 
 /**
