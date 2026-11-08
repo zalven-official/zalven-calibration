@@ -20,6 +20,8 @@ export const siteConfig = {
   mapsEmbedSrc:
     "https://www.google.com/maps?q=14.7608411,121.0442613&z=16&output=embed",
   facebookUrl: "https://www.facebook.com/vcsdieselcalibrationservices",
+  reviewUrl: "https://g.page/r/CVBCAnbGpFsqEBM/review",
+  hours: { open: "06:00", close: "20:00", label: "6:00 AM – 8:00 PM, every day" },
   nav: [
     { label: "Home", href: "#home" },
     { label: "Services", href: "#services" },

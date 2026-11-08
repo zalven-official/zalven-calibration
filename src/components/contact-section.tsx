@@ -1,11 +1,13 @@
 import { useState, type FormEvent } from "react"
-import { Phone, Smartphone, Send, MapPin, Navigation, MessageCircle } from "lucide-react"
+import { Phone, Smartphone, Send, MapPin, Navigation, MessageCircle, Clock, Star } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { siteConfig } from "@/lib/site-config"
+import { ReviewCardDialog } from "@/components/review-card-dialog"
+import reviewQr from "@/assets/images/review-qr.png"
 
 export function ContactSection() {
   const [name, setName] = useState("")
@@ -94,6 +96,20 @@ export function ContactSection() {
                 </div>
               </CardContent>
             </Card>
+
+            <Card className="border-0 bg-white/5 ring-1 ring-white/10">
+              <CardContent className="flex items-center gap-4">
+                <div className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-brand-orange/15 text-brand-orange">
+                  <Clock className="size-5" />
+                </div>
+                <div>
+                  <p className="text-sm text-brand-silver">Hours</p>
+                  <p className="text-lg font-semibold text-white">
+                    {siteConfig.hours.label}
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
           <Card className="border-0 bg-white lg:col-span-3">
@@ -146,15 +162,47 @@ export function ContactSection() {
           </Card>
         </div>
 
-        <Card className="mt-6 overflow-hidden border-0 bg-white/5 py-0 ring-1 ring-white/10">
-          <iframe
-            title={`${siteConfig.name} location map`}
-            src={siteConfig.mapsEmbedSrc}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            className="h-80 w-full border-0"
-          />
-        </Card>
+        <div className="mt-6 grid gap-6 lg:grid-cols-5">
+          <Card className="overflow-hidden border-0 bg-white/5 py-0 ring-1 ring-white/10 lg:col-span-3">
+            <iframe
+              title={`${siteConfig.name} location map`}
+              src={siteConfig.mapsEmbedSrc}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="h-80 w-full border-0"
+            />
+          </Card>
+
+          <Card className="border-0 bg-white lg:col-span-2">
+            <CardContent className="flex h-full flex-col items-center justify-center gap-3 text-center">
+              <div className="flex gap-0.5 text-brand-orange">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} className="size-5 fill-brand-orange" />
+                ))}
+              </div>
+              <p className="text-base font-semibold text-brand-navy">
+                Happy with our service?
+              </p>
+              <p className="text-sm text-brand-steel">
+                Scan to leave us a review on Google.
+              </p>
+              <img
+                src={reviewQr}
+                alt="QR code to leave a Google review for Zalven Calibration"
+                className="size-32 rounded-lg ring-1 ring-brand-silver"
+              />
+              <a
+                href={siteConfig.reviewUrl}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="text-xs font-medium text-brand-steel hover:text-brand-navy hover:underline"
+              >
+                or tap here
+              </a>
+              <ReviewCardDialog />
+            </CardContent>
+          </Card>
+        </div>
       </div>
     </section>
   )
