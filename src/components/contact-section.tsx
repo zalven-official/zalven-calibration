@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from "react"
-import { Phone, Smartphone, Send } from "lucide-react"
+import { Phone, Smartphone, Send, MapPin, Navigation } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -68,6 +68,32 @@ export function ContactSection() {
                 </div>
               </CardContent>
             </Card>
+
+            <Card className="border-0 bg-white/5 ring-1 ring-white/10">
+              <CardContent className="flex items-start gap-4">
+                <div className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-brand-orange/15 text-brand-orange">
+                  <MapPin className="size-5" />
+                </div>
+                <div>
+                  <p className="text-sm text-brand-silver">Shop Address</p>
+                  <p className="text-base font-semibold text-white">
+                    {siteConfig.address.street}
+                  </p>
+                  <p className="text-sm text-brand-silver">
+                    {siteConfig.address.barangay}, {siteConfig.address.city}
+                  </p>
+                  <a
+                    href={siteConfig.mapsUrl}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="mt-2 inline-flex items-center gap-1.5 text-sm font-medium text-brand-orange hover:underline"
+                  >
+                    <Navigation className="size-3.5" />
+                    Get Directions
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
           <Card className="border-0 bg-white lg:col-span-3">
@@ -109,6 +135,16 @@ export function ContactSection() {
             </CardContent>
           </Card>
         </div>
+
+        <Card className="mt-6 overflow-hidden border-0 bg-white/5 py-0 ring-1 ring-white/10">
+          <iframe
+            title={`${siteConfig.name} location map`}
+            src={siteConfig.mapsEmbedSrc}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="h-80 w-full border-0"
+          />
+        </Card>
       </div>
     </section>
   )

@@ -50,8 +50,18 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-8 border-t border-white/10 pt-6 text-center text-xs text-brand-silver/70">
-          &copy; {year} {siteConfig.name}. All rights reserved.
+        <div className="mt-8 flex flex-col items-center gap-2 border-t border-white/10 pt-6 text-center text-xs text-brand-silver/70">
+          <a
+            href={siteConfig.mapsUrl}
+            target="_blank"
+            rel="noreferrer noopener"
+            className="hover:text-brand-orange"
+          >
+            {siteConfig.address.full}
+          </a>
+          <p>
+            &copy; {year} {siteConfig.name}. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

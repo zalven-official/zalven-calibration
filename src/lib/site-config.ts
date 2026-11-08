@@ -1,8 +1,23 @@
 export const siteConfig = {
   name: "Zalven Calibration",
+  legalName: "Zalven Calibration Shop",
   tagline: "Precision Diesel Fuel Injection Pump & Injector Calibration",
+  domain: "zalven-calibration.com",
+  url: "https://zalven-calibration.com",
   phone: { label: "7976 5180", href: "tel:79765180" },
   mobile: { label: "0969 404 6450", href: "tel:+639694046450" },
+  address: {
+    street: "967 Captain Samano",
+    barangay: "Brgy. 175, Camarin",
+    city: "Caloocan City",
+    region: "Metro Manila",
+    country: "Philippines",
+    full: "967 Captain Samano, Brgy. 175, Camarin, Caloocan City, Metro Manila",
+  },
+  geo: { lat: 14.7608411, lng: 121.0442613 },
+  mapsUrl: "https://maps.app.goo.gl/VX7EZud4vLn2mM9U8",
+  mapsEmbedSrc:
+    "https://www.google.com/maps?q=14.7608411,121.0442613&z=16&output=embed",
   nav: [
     { label: "Home", href: "#home" },
     { label: "Services", href: "#services" },
@@ -10,4 +25,16 @@ export const siteConfig = {
     { label: "Gallery", href: "#gallery" },
     { label: "Contact", href: "#contact" },
   ],
+  brandsServiced: [
+    "Isuzu",
+    "Mitsubishi",
+    "Toyota",
+    "Caterpillar",
+    "Perkins",
+    "Volvo",
+    "Mercedes-Benz",
+    "Hyundai",
+    "Stanadyne",
+  ],
+  partsBrands: ["Bosch", "Delphi", "Zexel", "OMS"],
 } as const
