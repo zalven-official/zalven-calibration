@@ -19,7 +19,7 @@ export const siteConfig = {
   mapsUrl: "https://maps.app.goo.gl/VX7EZud4vLn2mM9U8",
   mapsEmbedSrc:
     "https://www.google.com/maps?q=14.7608411,121.0442613&z=16&output=embed",
-  facebookUrl: "https://www.facebook.com/zaldy.dayao",
+  facebookUrl: "https://www.facebook.com/vcsdieselcalibrationservices",
   nav: [
     { label: "Home", href: "#home" },
     { label: "Services", href: "#services" },
