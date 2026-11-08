@@ -169,8 +169,23 @@ export function ContactSection() {
               src={siteConfig.mapsEmbedSrc}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="h-80 w-full border-0"
+              className="h-72 w-full border-0"
             />
+            <div className="flex items-center justify-between px-4 py-3">
+              <div>
+                <p className="text-sm font-semibold text-white">{siteConfig.legalName}</p>
+                <p className="text-xs text-brand-silver">{siteConfig.address.full}</p>
+              </div>
+              <a
+                href={siteConfig.mapsUrl}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="inline-flex shrink-0 items-center gap-1.5 text-xs font-medium text-brand-orange hover:underline"
+              >
+                <Navigation className="size-3.5" />
+                Get Directions
+              </a>
+            </div>
           </Card>
 
           <Card className="border-0 bg-white lg:col-span-2">
