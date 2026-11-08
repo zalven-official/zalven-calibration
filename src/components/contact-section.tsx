@@ -1,0 +1,115 @@
+import { useState, type FormEvent } from "react"
+import { Phone, Smartphone, Send } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Textarea } from "@/components/ui/textarea"
+import { siteConfig } from "@/lib/site-config"
+
+export function ContactSection() {
+  const [name, setName] = useState("")
+  const [message, setMessage] = useState("")
+
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    const body = `Hi ${siteConfig.name}, my name is ${name}. ${message}`
+    window.location.href = `sms:${siteConfig.mobile.href.replace("tel:", "")}?body=${encodeURIComponent(body)}`
+  }
+
+  return (
+    <section id="contact" className="bg-brand-navy py-20">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <div className="mx-auto max-w-2xl text-center">
+          <span className="text-sm font-semibold tracking-wide text-brand-orange uppercase">
+            Get In Touch
+          </span>
+          <h2 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Talk to Our Team
+          </h2>
+          <p className="mt-3 text-brand-silver">
+            Call, text, or send a message and we&apos;ll get back to you
+            about your pump or injector.
+          </p>
+        </div>
+
+        <div className="mt-12 grid gap-6 lg:grid-cols-5">
+          <div className="space-y-4 lg:col-span-2">
+            <Card className="border-0 bg-white/5 ring-1 ring-white/10">
+              <CardContent className="flex items-center gap-4">
+                <div className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-brand-orange/15 text-brand-orange">
+                  <Phone className="size-5" />
+                </div>
+                <div>
+                  <p className="text-sm text-brand-silver">Telephone</p>
+                  <a
+                    href={siteConfig.phone.href}
+                    className="text-lg font-semibold text-white hover:text-brand-orange"
+                  >
+                    {siteConfig.phone.label}
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 bg-white/5 ring-1 ring-white/10">
+              <CardContent className="flex items-center gap-4">
+                <div className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-brand-orange/15 text-brand-orange">
+                  <Smartphone className="size-5" />
+                </div>
+                <div>
+                  <p className="text-sm text-brand-silver">Mobile</p>
+                  <a
+                    href={siteConfig.mobile.href}
+                    className="text-lg font-semibold text-white hover:text-brand-orange"
+                  >
+                    {siteConfig.mobile.label}
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <Card className="border-0 bg-white lg:col-span-3">
+            <CardContent>
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="space-y-1.5">
+                  <Label htmlFor="name" className="text-brand-navy">
+                    Your Name
+                  </Label>
+                  <Input
+                    id="name"
+                    required
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    placeholder="Juan Dela Cruz"
+                  />
+                </div>
+                <div className="space-y-1.5">
+                  <Label htmlFor="message" className="text-brand-navy">
+                    Message
+                  </Label>
+                  <Textarea
+                    id="message"
+                    required
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    placeholder="Tell us about your pump, injector, or vehicle..."
+                    rows={4}
+                  />
+                </div>
+                <Button
+                  type="submit"
+                  className="w-full bg-brand-orange text-white hover:bg-brand-orange/90"
+                >
+                  <Send className="size-4" />
+                  Send Message
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </section>
+  )
+}
