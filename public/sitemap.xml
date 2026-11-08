@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+>
   <url>
     <loc>https://zalven-calibration.com/</loc>
-    <lastmod>2026-11-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-11-09</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://zalven-calibration.com/og-image.jpg</image:loc>
+      <image:title>Zalven Calibration</image:title>
+      <image:caption>Zalven Calibration - diesel fuel injection pump and injector calibration, Caloocan City</image:caption>
+    </image:image>
   </url>
 </urlset>
