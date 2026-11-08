@@ -9,7 +9,7 @@ import shopWide from "@/assets/images/shop-wide.webp"
 import partsKit from "@/assets/images/parts-kit.webp"
 
 const photos = [
-  { src: technician, alt: "Technician at the calibration test bench", w: 1000, h: 750 },
+  { src: technician, alt: "Technician at the calibration test bench", w: 760, h: 570 },
   { src: shopWide, alt: "Caterpillar fuel injection pumps on the shop bench", w: 825, h: 1100 },
   { src: pumpInjectors01, alt: "Overhauled fuel pump with matching injector set", w: 750, h: 1000 },
   { src: volvo2pin, alt: "Genuine Volvo 2-pin unit injectors and rebuild kits", w: 825, h: 1100 },

@@ -17,8 +17,8 @@ export function AboutSection() {
           <img
             src={technicianImage}
             alt={`${siteConfig.name} technician with a diesel fuel pump calibration test bench`}
-            width={1000}
-            height={750}
+            width={760}
+            height={570}
             className="h-full w-full object-cover"
           />
         </div>
