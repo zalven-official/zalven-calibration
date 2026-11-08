@@ -52,7 +52,7 @@ export function ServicesSection() {
     <section id="services" className="bg-brand-bg py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <span className="text-sm font-semibold tracking-wide text-brand-orange uppercase">
+          <span className="text-sm font-semibold tracking-wide text-brand-orange-ink uppercase">
             What We Do
           </span>
           <h2 className="mt-2 text-3xl font-bold tracking-tight text-brand-navy sm:text-4xl">

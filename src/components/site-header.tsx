@@ -19,6 +19,8 @@ export function SiteHeader() {
           <img
             src={logo}
             alt={`${siteConfig.name} logo`}
+            width={256}
+            height={256}
             className="h-10 w-10 rounded-full object-cover"
           />
           <span className="text-lg font-bold tracking-tight text-brand-navy">

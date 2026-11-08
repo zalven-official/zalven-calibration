@@ -53,6 +53,9 @@
     --color-brand-steel: #4a6b82;
     --color-brand-silver: #d5dee5;
     --color-brand-bg: #f8f9fa;
+    /* Darker orange for text on light backgrounds - #ff6622 only hits ~2.9:1
+       contrast on white, failing WCAG AA (4.5:1). This hits ~5.2:1. */
+    --color-brand-orange-ink: #c2410c;
 }
 
 :root {

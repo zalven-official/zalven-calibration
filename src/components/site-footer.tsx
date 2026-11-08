@@ -13,6 +13,8 @@ export function SiteFooter() {
             <img
               src={logo}
               alt={`${siteConfig.name} logo`}
+              width={256}
+              height={256}
               className="h-9 w-9 rounded-full object-cover"
             />
             <span className="text-base font-bold text-white">

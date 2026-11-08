@@ -2,16 +2,21 @@ import { Gauge, Phone, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { siteConfig } from "@/lib/site-config"
 import heroImage from "@/assets/images/pump-injectors-02.webp"
+import heroImageMobile from "@/assets/images/pump-injectors-02-mobile.webp"
 
 export function HeroSection() {
   return (
     <section id="home" className="relative overflow-hidden bg-brand-navy">
       <img
         src={heroImage}
+        srcSet={`${heroImageMobile} 600w, ${heroImage} 1350w`}
+        sizes="100vw"
         alt="Diesel fuel injection pump under calibration on a test bench"
         className="absolute inset-0 h-full w-full object-cover opacity-30"
         fetchPriority="high"
         decoding="async"
+        width={1350}
+        height={1800}
       />
       <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/95 to-brand-navy/70" />
 

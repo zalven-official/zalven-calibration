@@ -40,7 +40,7 @@ export function FaqSection() {
     <section id="faq" className="bg-white py-20">
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
         <div className="text-center">
-          <span className="text-sm font-semibold tracking-wide text-brand-orange uppercase">
+          <span className="text-sm font-semibold tracking-wide text-brand-orange-ink uppercase">
             FAQ
           </span>
           <h2 className="mt-2 text-3xl font-bold tracking-tight text-brand-navy sm:text-4xl">

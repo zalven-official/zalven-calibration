@@ -17,12 +17,14 @@ export function AboutSection() {
           <img
             src={technicianImage}
             alt={`${siteConfig.name} technician with a diesel fuel pump calibration test bench`}
+            width={1000}
+            height={750}
             className="h-full w-full object-cover"
           />
         </div>
 
         <div>
-          <span className="text-sm font-semibold tracking-wide text-brand-orange uppercase">
+          <span className="text-sm font-semibold tracking-wide text-brand-orange-ink uppercase">
             About Us
           </span>
           <h2 className="mt-2 text-3xl font-bold tracking-tight text-brand-navy sm:text-4xl">

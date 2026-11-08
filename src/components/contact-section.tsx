@@ -204,6 +204,8 @@ export function ContactSection() {
               <img
                 src={reviewQr}
                 alt="QR code to leave a Google review for Zalven Calibration"
+                width={148}
+                height={148}
                 className="size-32 rounded-lg ring-1 ring-brand-silver"
               />
               <a
