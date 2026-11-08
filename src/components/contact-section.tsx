@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from "react"
-import { Phone, Smartphone, Send, MapPin, Navigation } from "lucide-react"
+import { Phone, Smartphone, Send, MapPin, Navigation, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -131,6 +131,16 @@ export function ContactSection() {
                   <Send className="size-4" />
                   Send Message
                 </Button>
+
+                <a
+                  href={siteConfig.facebookUrl}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="flex items-center justify-center gap-1.5 text-sm font-medium text-brand-steel hover:text-brand-navy"
+                >
+                  <MessageCircle className="size-4" />
+                  Or message us on Facebook
+                </a>
               </form>
             </CardContent>
           </Card>

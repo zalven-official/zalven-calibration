@@ -1,4 +1,4 @@
-import { Phone, Smartphone } from "lucide-react"
+import { Phone, Smartphone, MessageCircle } from "lucide-react"
 import { siteConfig } from "@/lib/site-config"
 import logo from "@/assets/images/logo.webp"
 
@@ -46,6 +46,15 @@ export function SiteFooter() {
             >
               <Smartphone className="size-4" />
               {siteConfig.mobile.label}
+            </a>
+            <a
+              href={siteConfig.facebookUrl}
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="Message us on Facebook"
+              className="flex items-center gap-1.5 text-sm text-brand-silver hover:text-brand-orange"
+            >
+              <MessageCircle className="size-4" />
             </a>
           </div>
         </div>

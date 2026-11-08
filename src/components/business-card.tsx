@@ -4,8 +4,10 @@ import { siteConfig } from "@/lib/site-config"
 
 /**
  * Standard US business card size at 96 CSS px/in (3.5in x 2in).
+ * The PDF/print export renders this node at the exact same aspect
+ * ratio onto a 3.5in x 2in page, so it prints at true size.
  * Kept to plain inline styles (no Tailwind color utilities) so the
- * card renders identically when captured to an image for the PDF export.
+ * card renders identically when captured to an image for export.
  */
 export const CARD_WIDTH = 336
 export const CARD_HEIGHT = 192
@@ -14,6 +16,8 @@ const NAVY = "#0e1b38"
 const ORANGE = "#ff6622"
 const SILVER = "#d5dee5"
 const WHITE = "#ffffff"
+
+const brandsLine = siteConfig.brandsServiced.join(" • ")
 
 export const BusinessCard = forwardRef<HTMLDivElement>(function BusinessCard(
   _props,
@@ -28,8 +32,7 @@ export const BusinessCard = forwardRef<HTMLDivElement>(function BusinessCard(
         background: NAVY,
         position: "relative",
         overflow: "hidden",
-        fontFamily:
-          "'Helvetica Neue', Helvetica, Arial, sans-serif",
+        fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif",
         color: WHITE,
         boxSizing: "border-box",
       }}
@@ -40,7 +43,7 @@ export const BusinessCard = forwardRef<HTMLDivElement>(function BusinessCard(
           top: 0,
           right: 0,
           bottom: 0,
-          width: 10,
+          width: 8,
           background: ORANGE,
         }}
       />
@@ -51,18 +54,18 @@ export const BusinessCard = forwardRef<HTMLDivElement>(function BusinessCard(
           flexDirection: "column",
           justifyContent: "space-between",
           height: "100%",
-          padding: "18px 24px 16px 20px",
+          padding: "14px 22px 12px 18px",
           boxSizing: "border-box",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 9 }}>
           <img
             src={logo}
             alt=""
             crossOrigin="anonymous"
             style={{
-              width: 38,
-              height: 38,
+              width: 34,
+              height: 34,
               borderRadius: "50%",
               background: WHITE,
               objectFit: "cover",
@@ -72,7 +75,7 @@ export const BusinessCard = forwardRef<HTMLDivElement>(function BusinessCard(
           <div>
             <div
               style={{
-                fontSize: 16,
+                fontSize: 15,
                 fontWeight: 700,
                 letterSpacing: -0.2,
                 lineHeight: 1.1,
@@ -83,12 +86,12 @@ export const BusinessCard = forwardRef<HTMLDivElement>(function BusinessCard(
             </div>
             <div
               style={{
-                fontSize: 8.5,
+                fontSize: 7.5,
                 fontWeight: 600,
-                letterSpacing: 0.4,
+                letterSpacing: 0.3,
                 textTransform: "uppercase",
                 color: ORANGE,
-                marginTop: 2,
+                marginTop: 1,
               }}
             >
               Diesel Pump &amp; Injector Calibration
@@ -97,31 +100,65 @@ export const BusinessCard = forwardRef<HTMLDivElement>(function BusinessCard(
         </div>
 
         <div
-          style={{
-            height: 1,
-            background: "rgba(255,255,255,0.15)",
-            margin: "10px 0",
-          }}
+          style={{ height: 1, background: "rgba(255,255,255,0.15)", margin: "7px 0" }}
         />
 
-        <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
-          <div style={{ fontSize: 9.5, color: SILVER }}>
-            <span style={{ color: WHITE, fontWeight: 600 }}>Tel:</span>{" "}
-            {siteConfig.phone.label}
-            <span style={{ margin: "0 6px", color: "rgba(255,255,255,0.3)" }}>
-              |
+        <div>
+          <div
+            style={{
+              fontSize: 6.8,
+              fontWeight: 700,
+              letterSpacing: 0.4,
+              textTransform: "uppercase",
+              color: ORANGE,
+              marginBottom: 2,
+            }}
+          >
+            Engines We Service
+          </div>
+          <div style={{ fontSize: 7.8, lineHeight: 1.4, color: SILVER }}>
+            {brandsLine}
+          </div>
+        </div>
+
+        <div
+          style={{ height: 1, background: "rgba(255,255,255,0.15)", margin: "7px 0" }}
+        />
+
+        <div style={{ display: "flex", flexDirection: "column", gap: 2.5 }}>
+          <div
+            style={{
+              fontSize: 9,
+              color: SILVER,
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
+            <span>
+              <span style={{ color: WHITE, fontWeight: 600 }}>Tel:</span>{" "}
+              {siteConfig.phone.label}
+              <span style={{ margin: "0 5px", color: "rgba(255,255,255,0.3)" }}>
+                |
+              </span>
+              <span style={{ color: WHITE, fontWeight: 600 }}>Mobile:</span>{" "}
+              {siteConfig.mobile.label}
             </span>
-            <span style={{ color: WHITE, fontWeight: 600 }}>Mobile:</span>{" "}
-            {siteConfig.mobile.label}
           </div>
-          <div style={{ fontSize: 9.5, color: SILVER }}>
-            {siteConfig.address.street}, {siteConfig.address.barangay}
-          </div>
-          <div style={{ fontSize: 9.5, color: SILVER }}>
-            {siteConfig.address.city}, {siteConfig.address.region}
-          </div>
-          <div style={{ fontSize: 9.5, color: ORANGE, fontWeight: 600, marginTop: 2 }}>
-            {siteConfig.domain}
+          <div
+            style={{
+              fontSize: 9,
+              color: SILVER,
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "flex-end",
+            }}
+          >
+            <span>
+              {siteConfig.address.city}, {siteConfig.address.region}
+            </span>
+            <span style={{ color: ORANGE, fontWeight: 600 }}>
+              {siteConfig.domain}
+            </span>
           </div>
         </div>
       </div>

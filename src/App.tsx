@@ -1,6 +1,7 @@
 import { SiteHeader } from "@/components/site-header"
 import { HeroSection } from "@/components/hero-section"
 import { ServicesSection } from "@/components/services-section"
+import { BrandsSection } from "@/components/brands-section"
 import { AboutSection } from "@/components/about-section"
 import { GallerySection } from "@/components/gallery-section"
 import { ContactSection } from "@/components/contact-section"
@@ -13,6 +14,7 @@ function App() {
       <main>
         <HeroSection />
         <ServicesSection />
+        <BrandsSection />
         <AboutSection />
         <GallerySection />
         <ContactSection />

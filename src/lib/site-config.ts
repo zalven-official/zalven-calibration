@@ -18,6 +18,7 @@ export const siteConfig = {
   mapsUrl: "https://maps.app.goo.gl/VX7EZud4vLn2mM9U8",
   mapsEmbedSrc:
     "https://www.google.com/maps?q=14.7608411,121.0442613&z=16&output=embed",
+  facebookUrl: "https://www.facebook.com/zaldy.dayao",
   nav: [
     { label: "Home", href: "#home" },
     { label: "Services", href: "#services" },
@@ -36,5 +37,5 @@ export const siteConfig = {
     "Hyundai",
     "Stanadyne",
   ],
-  partsBrands: ["Bosch", "Delphi", "Zexel", "OMS"],
+  partsBrands: ["Bosch", "Delphi", "Zexel", "OMS", "Interstate-McBee"],
 } as const

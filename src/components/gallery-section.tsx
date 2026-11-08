@@ -1,20 +1,22 @@
 import pumpInjectors01 from "@/assets/images/pump-injectors-01.webp"
-import pumpInjectors02 from "@/assets/images/pump-injectors-02.webp"
 import pumpInjectors03 from "@/assets/images/pump-injectors-03.webp"
 import workshop02 from "@/assets/images/workshop-02.webp"
 import workshop03 from "@/assets/images/workshop-03.webp"
 import technician from "@/assets/images/workshop-technician.webp"
 import volvo2pin from "@/assets/images/volvo-2pin.webp"
 import catOnsite from "@/assets/images/cat-onsite.webp"
+import shopWide from "@/assets/images/shop-wide.webp"
+import partsKit from "@/assets/images/parts-kit.webp"
 
 const photos = [
   { src: technician, alt: "Technician at the calibration test bench" },
-  { src: pumpInjectors02, alt: "Fuel pump on the test bench with flow-rate gauges" },
+  { src: shopWide, alt: "Caterpillar fuel injection pumps on the shop bench" },
   { src: pumpInjectors01, alt: "Overhauled fuel pump with matching injector set" },
   { src: volvo2pin, alt: "Genuine Volvo 2-pin unit injectors and rebuild kits" },
   { src: workshop03, alt: "Fully disassembled pump components laid out for rebuild" },
   { src: pumpInjectors03, alt: "Rebuilt pump assembly alongside injector sets" },
   { src: catOnsite, alt: "On-site Caterpillar engine fuel system service" },
+  { src: partsKit, alt: "Genuine rebuild kit parts from Interstate-McBee" },
   { src: workshop02, alt: "On-site fuel pump service on heavy equipment" },
 ]
 

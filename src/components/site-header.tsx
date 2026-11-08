@@ -1,4 +1,4 @@
-import { Menu, Phone } from "lucide-react"
+import { Menu, Phone, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
   Sheet,
@@ -7,6 +7,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
+import { BusinessCardDialog } from "@/components/business-card-dialog"
 import { siteConfig } from "@/lib/site-config"
 import logo from "@/assets/images/logo.webp"
 
@@ -25,7 +26,7 @@ export function SiteHeader() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-7 lg:flex">
           {siteConfig.nav.map((item) => (
             <a
               key={item.href}
@@ -37,7 +38,23 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-2 md:flex">
+        <div className="hidden items-center gap-2 lg:flex">
+          <Button
+            variant="outline"
+            size="icon"
+            render={
+              <a
+                href={siteConfig.facebookUrl}
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="Message us on Facebook"
+              />
+            }
+            className="border-brand-silver text-brand-navy hover:bg-brand-silver/30"
+          >
+            <MessageCircle className="size-4.5" />
+          </Button>
+          <BusinessCardDialog />
           <Button
             render={<a href={siteConfig.phone.href} />}
             className="bg-brand-orange text-white hover:bg-brand-orange/90"
@@ -53,7 +70,7 @@ export function SiteHeader() {
               <Button
                 variant="ghost"
                 size="icon"
-                className="md:hidden text-brand-navy"
+                className="lg:hidden text-brand-navy"
                 aria-label="Open menu"
               />
             }
@@ -81,6 +98,23 @@ export function SiteHeader() {
                 <Phone className="size-4" />
                 Call Now
               </Button>
+              <Button
+                variant="outline"
+                render={
+                  <a
+                    href={siteConfig.facebookUrl}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  />
+                }
+                className="border-brand-silver text-brand-navy"
+              >
+                <MessageCircle className="size-4" />
+                Message on Facebook
+              </Button>
+              <div className="mt-1">
+                <BusinessCardDialog fullWidth />
+              </div>
             </nav>
           </SheetContent>
         </Sheet>
