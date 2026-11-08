@@ -4,6 +4,7 @@ import { ServicesSection } from "@/components/services-section"
 import { BrandsSection } from "@/components/brands-section"
 import { AboutSection } from "@/components/about-section"
 import { GallerySection } from "@/components/gallery-section"
+import { FaqSection } from "@/components/faq-section"
 import { ContactSection } from "@/components/contact-section"
 import { SiteFooter } from "@/components/site-footer"
 
@@ -17,6 +18,7 @@ function App() {
         <BrandsSection />
         <AboutSection />
         <GallerySection />
+        <FaqSection />
         <ContactSection />
       </main>
       <SiteFooter />

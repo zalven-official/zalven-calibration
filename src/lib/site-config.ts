@@ -24,6 +24,7 @@ export const siteConfig = {
     { label: "Services", href: "#services" },
     { label: "About", href: "#about" },
     { label: "Gallery", href: "#gallery" },
+    { label: "FAQ", href: "#faq" },
     { label: "Contact", href: "#contact" },
   ],
   brandsServiced: [
