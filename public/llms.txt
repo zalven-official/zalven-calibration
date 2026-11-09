@@ -1,7 +1,8 @@
 # Zalven Calibration
 
-> Zalven Calibration (also known as Zalven Calibration Shop) is a diesel fuel injection pump and
-> injector calibration, testing, and repair shop in Caloocan City, Metro Manila, Philippines.
+> Zalven Calibration (also known as Zalven Calibration Shop) is a diesel calibration shop offering
+> diesel fuel injection pump and injector calibration, testing, and repair in Caloocan City, Metro
+> Manila, Philippines.
 > It tests, repairs, and calibrates diesel fuel injection pumps and injectors for cars, trucks, and
 > heavy equipment, servicing Isuzu, Mitsubishi, Toyota, Caterpillar, Perkins, Volvo, Mercedes-Benz,
 > Hyundai, and Stanadyne engines, using genuine parts from Bosch, Delphi, Zexel, OMS, and

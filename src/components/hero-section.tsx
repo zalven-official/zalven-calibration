@@ -20,17 +20,18 @@ export function HeroSection() {
       <div className="relative mx-auto flex max-w-6xl flex-col items-start gap-6 px-4 py-24 sm:px-6 sm:py-32">
         <span className="inline-flex items-center gap-2 rounded-full border border-brand-orange/40 bg-brand-orange/10 px-3 py-1 text-xs font-semibold tracking-wide text-brand-orange uppercase">
           <Gauge className="size-3.5" />
-          Diesel Fuel Injection Specialists
+          Diesel Calibration Specialists
         </span>
 
         <h1 className="max-w-2xl text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
-          Precision Diesel Pump &amp; Injector Calibration
+          Diesel Calibration Shop in Caloocan &mdash; Pump &amp; Injector Specialists
         </h1>
 
         <p className="max-w-xl text-base leading-relaxed text-brand-silver sm:text-lg">
-          {siteConfig.name} tests, repairs, and calibrates inline and rotary
-          fuel injection pumps and injectors for cars, trucks, and heavy
-          equipment &mdash; backed by genuine OEM parts and bench-tested accuracy.
+          {siteConfig.name} is a diesel calibration shop that tests, repairs,
+          and calibrates inline and rotary fuel injection pumps and injectors
+          for cars, trucks, and heavy equipment &mdash; backed by genuine OEM
+          parts and bench-tested accuracy.
         </p>
 
         <div className="flex flex-wrap items-center gap-3 pt-2">
